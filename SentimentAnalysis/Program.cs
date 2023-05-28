@@ -95,7 +95,7 @@ namespace SentimentAnalysis
             },
             new SentimentData
             {
-            SentimentText = "Mi esposo dijo que ella fue muy grosera... ni siquiera se disculpó por la mala comida ni nada."
+            SentimentText = "The chips and sals a here is amazing!!!!!!!!!!!!!!!!!!!"
             }
             };
             IDataView batchComments = mlContext.Data.LoadFromEnumerable(sentiments);
@@ -110,7 +110,7 @@ namespace SentimentAnalysis
             
             foreach (SentimentPrediction prediction in predictedResults)
             {
-                Console.WriteLine($"Sentiment: {prediction.SentimentText} | Prediction: {(Convert.ToBoolean(prediction.Prediction) ? "Spanish" : "English")} | Probability: {prediction.Probability} ");
+                Console.WriteLine($"Sentiment: {prediction.SentimentText} | Prediction: {(Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative")} | Probability: {prediction.Probability} ");
             }
             Console.WriteLine("=============== End of predictions ===============");
 
